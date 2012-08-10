@@ -1,0 +1,20 @@
+Fri Aug 10 02:22:22 [initandlisten] MongoDB starting : pid=941 port=27017 dbpath=/Volumes/WORK_IN_PROGRESS/OPENFRAMEWORKS/0071_RELEASE/apps/myApps/mongoTest/bin/data/mongo/db 64-bit host=JVCTOWER.local
+Fri Aug 10 02:22:22 [initandlisten] db version v2.0.6, pdfile version 4.5
+Fri Aug 10 02:22:22 [initandlisten] git version: e1c0cbc25863f6356aa4e31375add7bb49fb05bc
+Fri Aug 10 02:22:22 [initandlisten] build info: Darwin erh2.10gen.cc 9.8.0 Darwin Kernel Version 9.8.0: Wed Jul 15 16:55:01 PDT 2009; root:xnu-1228.15.4~1/RELEASE_I386 i386 BOOST_LIB_VERSION=1_40
+Fri Aug 10 02:22:22 [initandlisten] options: { bind_ip: "127.0.0.1", command: [ "run" ], config: "/Volumes/WORK_IN_PROGRESS/OPENFRAMEWORKS/0071_RELEASE/apps/myApps/mongoTest/bin/data/mongo/mongo.conf", dbpath: "/Volumes/WORK_IN_PROGRESS/OPENFRAMEWORKS/0071_RELEASE/apps/myApps/mongoTest/bin/data/mongo/db", logpath: "/Volumes/WORK_IN_PROGRESS/OPENFRAMEWORKS/0071_RELEASE/apps/myApps/mongoTest/bin/data/mongo/log/mongod.log" }
+Fri Aug 10 02:22:22 [initandlisten] exception in initAndListen: 10310 Unable to acquire lock for lockfilepath: /Volumes/WORK_IN_PROGRESS/OPENFRAMEWORKS/0071_RELEASE/apps/myApps/mongoTest/bin/data/mongo/db/mongod.lock, terminating
+Fri Aug 10 02:22:22 dbexit: 
+Fri Aug 10 02:22:22 [initandlisten] shutdown: going to close listening sockets...
+Fri Aug 10 02:22:22 [initandlisten] shutdown: going to flush diaglog...
+Fri Aug 10 02:22:22 [initandlisten] shutdown: going to close sockets...
+Fri Aug 10 02:22:22 [initandlisten] shutdown: waiting for fs preallocator...
+Fri Aug 10 02:22:22 [initandlisten] shutdown: lock for fiFri Aug 10 02:22:24 [clientcursormon] mem (MB) res:14 virt:2447 mapped:0
+Fri Aug 10 02:22:26 [conn2] end connection 127.0.0.1:49257
+Fri Aug 10 02:27:24 [clientcursormon] mem (MB) res:14 virt:2452 mapped:0
+Fri Aug 10 02:32:24 [clientcursormon] mem (MB) res:14 virt:2455 mapped:0
+Fri Aug 10 02:37:24 [clientcursormon] mem (MB) res:14 virt:2455 mapped:0
+Fri Aug 10 02:42:24 [clientcursormon] mem (MB) res:14 virt:2455 mapped:0
+Fri Aug 10 02:47:25 [clientcursormon] mem (MB) res:15 virt:2456 mapped:0
+Fri Aug 10 02:52:25 [clientcursormon] mem (MB) res:15 virt:2460 mapped:0
+Fri Aug 10 02:57:25 [clientcursormon] mem (MB) res:15 virt:2460 mapped:0

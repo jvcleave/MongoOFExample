@@ -16,6 +16,32 @@ void printIfAge(DBClientConnection& c, string dbName, int age)
 //--------------------------------------------------------------
 void testApp::setup()
 {
+	
+	
+	
+	//lets get a real absolute path to the data directory
+	
+	string currentPath = ofToDataPath("", true);
+	vector<string> parts = ofSplitString(currentPath, "bin");
+	string binDataDir = parts[0]+"bin/data/";
+	string confPath = binDataDir+"mongo/mongo.conf";
+	cout << confPath << endl;
+	ofFile confFile(confPath, ofFile::ReadWrite, false);
+	confFile.remove(false);
+	confFile.create();
+	ofBuffer input;
+	
+	input << "hi";
+	return;
+	//confFile.save();
+	/*
+	 confFile
+	return;
+	string startCommand = "	/usr/local/bin/mongod run --config=/Volumes/WORK_IN_PROGRESS/OPENFRAMEWORKS/0071_RELEASE/apps/myApps/mongoTest/bin/data/mongo/mongo.conf > /dev/null 2>&1 &";
+	cout << startCommand.c_str() << endl;
+	return;
+	int procID = system(startCommand.c_str());
+	cout << "procID: " << procID << endl;
 	dynamicDBName = ofGetTimestampString()+".persons";
 	ofSetLogLevel(OF_LOG_VERBOSE);
 	try 

@@ -7,4 +7,4 @@ OF_PATH = ../../..
 
 OTHER_LDFLAGS = $(OF_CORE_LIBS) 
 HEADER_SEARCH_PATHS = $(OF_CORE_HEADERS)
-USER_HEADER_SEARCH_PATHS = $(PROJECT_DIR)/addons/mongo/include $(PROJECT_DIR)/addons/mongo/include/third_party/boost
+USER_HEADER_SEARCH_PATHS = $(PROJECT_DIR)/addons/mongo/include $(PROJECT_DIR)/addons/mongo/include/third_party/boost 

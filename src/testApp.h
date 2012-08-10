@@ -20,7 +20,6 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-	//using namespace mongo;
 	mongo::DBClientConnection connection;
 	string dynamicDBName;
 };
