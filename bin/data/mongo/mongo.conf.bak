@@ -1,0 +1,3 @@
+dbpath = /Volumes/WORK_IN_PROGRESS/OPENFRAMEWORKS/0071_RELEASE/apps/myApps/mongoTest/bin/data/mongo/db
+logpath =/Volumes/WORK_IN_PROGRESS/OPENFRAMEWORKS/0071_RELEASE/apps/myApps/mongoTest/bin/data/mongo/log/mongod.log
+bind_ip = 127.0.0.1

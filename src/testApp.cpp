@@ -18,32 +18,41 @@ void testApp::setup()
 {
 	
 	
-	
+	ofSetLogLevel(OF_LOG_VERBOSE);
+
 	//lets get a real absolute path to the data directory
 	
-	string currentPath = ofToDataPath("", true);
-	vector<string> parts = ofSplitString(currentPath, "bin");
-	string binDataDir = parts[0]+"bin/data/";
-	string confPath = binDataDir+"mongo/mongo.conf";
-	cout << confPath << endl;
-	ofFile confFile(confPath, ofFile::ReadWrite, false);
-	confFile.remove(false);
-	confFile.create();
-	ofBuffer input;
+	string currentPath = ofToDataPath("", true); //current path to bin/data, will have ../../etc - can't use it
 	
-	input << "hi";
-	return;
-	//confFile.save();
-	/*
-	 confFile
-	return;
-	string startCommand = "	/usr/local/bin/mongod run --config=/Volumes/WORK_IN_PROGRESS/OPENFRAMEWORKS/0071_RELEASE/apps/myApps/mongoTest/bin/data/mongo/mongo.conf > /dev/null 2>&1 &";
-	cout << startCommand.c_str() << endl;
-	return;
-	int procID = system(startCommand.c_str());
-	cout << "procID: " << procID << endl;
-	dynamicDBName = ofGetTimestampString()+".persons";
-	ofSetLogLevel(OF_LOG_VERBOSE);
+	vector<string> parts = ofSplitString(currentPath, "bin");
+	string realAbsPath = parts[0]+"bin/data/";
+	string mongoConfPath = realAbsPath+"mongo/mongo.conf";
+	ofFile confFile(mongoConfPath, ofFile::ReadWrite, false);
+	confFile.copyTo(mongoConfPath+".bak", true);
+	confFile.remove();//delete existing file
+	string mongoDBpath = realAbsPath+"mongo/db";
+	
+	ofFile mongoDBPathCheck(mongoDBpath);
+	if (!mongoDBPathCheck.exists()) 
+	{
+		ofDirectory mongoDBDir(mongoDBPathCheck);
+		mongoDBDir.create();
+	}
+	stringstream ss;
+	ss << "dbpath = " << mongoDBpath << endl;
+	ss << "logpath =" << realAbsPath+"mongo/log/mongod.log" << endl;
+	ss << "bind_ip = 127.0.0.1" << endl;
+	ofBuffer output(ss);
+	ofBufferToFile(mongoConfPath, output, false);
+	string startCommand = "	/usr/local/bin/mongod run --config="+mongoConfPath+" > /dev/null 2>&1 &";
+	ofLogVerbose() << "sending command" << startCommand.c_str() << endl;
+	int status = -1;
+	status = system(startCommand.c_str());
+	if(status != 0)//strange but true
+	{
+		ofLogError() << "mongodb startup failed" << endl;
+	}
+	dynamicDBName = "tutorial.persons";
 	try 
 	{
 		connection.connect("localhost");
@@ -65,7 +74,7 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-
+	
 }
 
 //--------------------------------------------------------------

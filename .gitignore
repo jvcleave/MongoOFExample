@@ -8,3 +8,4 @@ IMG_*_privateMetadataRef1.txt
 IMG_*_table.txt
 *.mode1v3
 *.pbxuser
+/bin/data/mongo/db
