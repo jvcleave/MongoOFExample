@@ -4,6 +4,7 @@ MongoDB files are huge so the bin/data/mongo* directories required by this proje
 Project to connect openFrameworks to a MongoDB. Not a proper addon at this point but does include boost/mongo libs in order to connect
 
 Tested with
+Xcode 3.2.6, Mac OS X 10.8 with 10.6 SDK
 OF 0071
 Mongo 2.0.6 installed via Homebrew
 
