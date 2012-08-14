@@ -1,0 +1,9 @@
+WARNING:
+MongoDB files are huge so the bin/data/mongo* directories required by this project are ignored via .gitignore and created on the fly when you run the app. Absolute paths are manipulated and used. This could lead to data loss. 
+
+Project to connect openFrameworks to a MongoDB. Not a proper addon at this point but does include boost/mongo libs in order to connect
+
+Tested with
+OF 0071
+Mongo 2.0.6 installed via Homebrew
+

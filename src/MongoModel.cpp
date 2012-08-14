@@ -10,6 +10,7 @@
 #include "MongoModel.h"
 
 string MongoModel::logName = "MongoModel";
+
 using namespace mongo;
 
 void printIfAge(DBClientConnection& c, string dbName, int age) 
@@ -35,7 +36,8 @@ MongoModel::MongoModel()
 void MongoModel::setup()
 {
 	//lets get a real absolute path to the data directory
-	string currentPath = ofToDataPath("", true); //current path to bin/data, will have ../../blah - can't use it
+	//current path to bin/data, will have ../../blah - can't use it with mongod conf
+	string currentPath = ofToDataPath("", true); 
 	
 	vector<string> parts = ofSplitString(currentPath, "bin");
 	realAbsPath = parts[0]+"bin/data/";
