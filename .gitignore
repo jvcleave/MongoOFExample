@@ -9,3 +9,4 @@ IMG_*_table.txt
 *.mode1v3
 *.pbxuser
 /bin/data/mongo/db
+/bin/data/mongo

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03B362A115DA2A060035FF8C /* MongoModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03B362A015DA2A060035FF8C /* MongoModel.cpp */; };
 		03ED1CC215D4CAD100758972 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ED1CB815D4CAD100758972 /* libboost_filesystem.a */; };
 		03ED1CC315D4CAD100758972 /* libboost_program_options.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ED1CB915D4CAD100758972 /* libboost_program_options.a */; };
 		03ED1CC415D4CAD100758972 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ED1CBA15D4CAD100758972 /* libboost_system.a */; };
@@ -70,6 +71,8 @@
 		03AC1C7315D4D0D600E96888 /* tool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tool.cpp; path = addons/mongo/include/mongo/tools/tool.cpp; sourceTree = "<group>"; };
 		03AC1C7415D4D0D600E96888 /* tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tool.h; path = addons/mongo/include/mongo/tools/tool.h; sourceTree = "<group>"; };
 		03AC1CA215D4D98D00E96888 /* mongod.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mongod.log; sourceTree = "<group>"; };
+		03B3629F15DA2A060035FF8C /* MongoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MongoModel.h; sourceTree = "<group>"; };
+		03B362A015DA2A060035FF8C /* MongoModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MongoModel.cpp; sourceTree = "<group>"; };
 		03ED1CB815D4CAD100758972 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_filesystem.a; sourceTree = "<group>"; };
 		03ED1CB915D4CAD100758972 /* libboost_program_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_program_options.a; sourceTree = "<group>"; };
 		03ED1CBA15D4CAD100758972 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_system.a; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
+				03B3629F15DA2A060035FF8C /* MongoModel.h */,
+				03B362A015DA2A060035FF8C /* MongoModel.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -338,6 +343,7 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
+				03B362A115DA2A060035FF8C /* MongoModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
